@@ -1,0 +1,3 @@
+SELECT *
+INTO tbl_MyFC1_team_player_count_do
+FROM vw_MyFC1_team_player_count_do;

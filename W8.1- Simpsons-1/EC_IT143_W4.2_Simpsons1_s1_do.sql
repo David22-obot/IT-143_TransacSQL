@@ -1,0 +1,2 @@
+-- Q1: How many characters are in each family group?
+-- A1: We will group characters by family_name.

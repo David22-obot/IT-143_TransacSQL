@@ -1,0 +1,1 @@
+EXEC sp_load_hello_world_do;

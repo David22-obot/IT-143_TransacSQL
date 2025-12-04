@@ -1,0 +1,2 @@
+-- Q1: How many players are on each team?
+-- A1: We will count players grouped by team.

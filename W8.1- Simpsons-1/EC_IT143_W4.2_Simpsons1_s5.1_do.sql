@@ -1,0 +1,3 @@
+SELECT *
+INTO tbl_Simpsons1_family_character_count_do
+FROM vw_Simpsons1_family_character_count_do;
