@@ -1,9 +1,10 @@
-CREATE OR ALTER PROCEDURE sp_load_Simpsons1_family_character_count_do
-AS
-BEGIN
-    TRUNCATE TABLE tbl_Simpsons1_family_character_count_do;
+/*
+    EC_IT143_W4.2_hello_world_s6_do.sql
+    Step 6: Load the table from the view.
+*/
 
-    INSERT INTO tbl_Simpsons1_family_character_count_do
-    SELECT *
-    FROM vw_Simpsons1_family_character_count_do;
-END;
+TRUNCATE TABLE Simpsons.dbo.tblTransactionDateRange;
+
+INSERT INTO Simpsons.dbo.tblTransactionDateRange (earliest_transaction, latest_transaction)
+SELECT earliest_transaction, latest_transaction
+FROM Simpsons.dbo.vwTransactionDateRange;
