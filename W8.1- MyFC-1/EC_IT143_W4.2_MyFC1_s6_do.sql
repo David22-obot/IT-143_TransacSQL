@@ -1,5 +1,10 @@
-TRUNCATE TABLE tbl_MyFC1_team_player_count_do;
+/*
+    EC_IT143_W4.2_hello_world_s6_do.sql
+    Step 6: Load table from view.
+*/
 
-INSERT INTO tbl_MyFC1_team_player_count_do
-SELECT *
-FROM vw_MyFC1_team_player_count_do;
+TRUNCATE TABLE MyFC.dbo.tblPlayerCountByTeam;
+
+INSERT INTO MyFC.dbo.tblPlayerCountByTeam (t_id, total_players)
+SELECT t_id, total_players
+FROM MyFC.dbo.vwPlayerCountByTeam;
