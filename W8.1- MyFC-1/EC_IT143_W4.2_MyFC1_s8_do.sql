@@ -1,1 +1,6 @@
-EXEC sp_load_MyFC1_team_player_count_do;
+/*
+    EC_IT143_W4.2_hello_world_s8_do.sql
+    Step 8: Call stored procedure.
+*/
+
+EXEC MyFC.dbo.spLoadPlayerCountByTeam;
