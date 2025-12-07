@@ -1,7 +1,13 @@
-DROP TABLE IF EXISTS tbl_MyFC1_team_player_count_do;
+/*
+    EC_IT143_W4.2_hello_world_s5.1_do.sql
+    Step 5.1: Create table from view using SELECT INTO.
+*/
 
-CREATE TABLE tbl_MyFC1_team_player_count_do (
-    team_name NVARCHAR(100) NOT NULL,
-    player_count INT NOT NULL,
-    CONSTRAINT pk_MyFC1_players DO PRIMARY KEY (team_name)
-);
+IF OBJECT_ID('MyFC.dbo.tblPlayerCountByTeam', 'U') IS NOT NULL
+    DROP TABLE MyFC.dbo.tblPlayerCountByTeam;
+GO
+
+SELECT *
+INTO MyFC.dbo.tblPlayerCountByTeam
+FROM MyFC.dbo.vwPlayerCountByTeam;
+GO
